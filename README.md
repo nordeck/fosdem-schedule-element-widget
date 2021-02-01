@@ -38,7 +38,7 @@ yarn add [package-name] --dev
 
 ### Local Testing
 
-To test the widget locally you can add it to a room using `/addwidget https://localhost:3000?theme=$theme`. This will only work in a chrome instance that is started with `--allow-insecure-localhost --disable-site-isolation-trials --disable-web-security` flags.
+To test the widget locally you can add it to a room using `/addwidget https://localhost:3000?theme=$theme&room=M.misc`. This will only work in a chrome instance that is started with `--allow-insecure-localhost --disable-site-isolation-trials --disable-web-security` flags.
 
 > WARNING: Do not use this chrome instance to browse the web!
 
