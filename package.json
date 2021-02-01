@@ -134,7 +134,7 @@
   "scripts": {
     "docker": "yarn run docker:build && yarn run docker:run && yarn run docker:remove",
     "docker:build": "node scripts/docker.js",
-    "docker:run": "dotenv -c development -- docker run -e REACT_APP_API_BASE_URL -e REACT_APP_HOME_SERVER_URL -p 3000:80 --name fosdem-schedule-element-widget nordeck/fosdem-schedule-element-widget",
+    "docker:run": "dotenv -c development -- docker run -e REACT_APP_PRIMARY_COLOR -e REACT_APP_HOME_SERVER_URL -p 3000:80 --name fosdem-schedule-element-widget nordeck/fosdem-schedule-element-widget",
     "docker:stop": "docker stop fosdem-schedule-element-widget",
     "docker:remove": "yarn run docker:stop && docker rm -v fosdem-schedule-element-widget",
     "docker:inspect": "docker inspect nordeck/fosdem-schedule-element-widget",
