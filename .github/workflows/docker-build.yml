@@ -1,0 +1,39 @@
+name: Docker Image Build
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+  pull_request:
+    branches:
+      - main
+      - dev
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout branch
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Install NPM packages
+      run: yarn install --non-interactive
+
+    - name: Check Linting Rules
+      run: yarn run lint
+
+    - name: Build Docker Image
+      run: yarn run docker:build
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

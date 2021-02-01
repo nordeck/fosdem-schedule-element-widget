@@ -1,0 +1,100 @@
+{
+  "extends": [
+    "react-app",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1,
+        "MemberExpression": 1
+      }
+    ],
+    "linebreak-style": 0,
+    "semi": 2,
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "prefer-template": 2,
+    "object-property-newline": 2,
+    "quotes": [
+      2,
+      "single"
+    ],
+    "sort-keys": 2,
+    "max-statements-per-line": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-var": 2,
+    "no-unused-vars": [
+      2,
+      {
+        "ignoreRestSiblings": true
+      }
+    ],
+    "prefer-spread": 2,
+    "prefer-const": 2,
+    "new-cap": 1,
+    "object-shorthand": 1,
+    "arrow-parens": 1,
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "promise/always-return": 2,
+    "promise/no-return-wrap": 2,
+    "promise/param-names": 2,
+    "promise/catch-or-return": 2,
+    "promise/no-native": 0,
+    "react/no-multi-comp": [
+      2,
+      {
+        "ignoreStateless": true
+      }
+    ],
+    "react/prefer-stateless-function": 2,
+    "react/jsx-key": 2,
+    "react/jsx-pascal-case": 2,
+    "react/jsx-curly-spacing": [
+      2,
+      "never"
+    ],
+    "react/jsx-indent-props": [
+      2,
+      2
+    ],
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-first-prop-new-line": [
+      2,
+      "multiline"
+    ],
+    "react/jsx-max-props-per-line": 2,
+    "react/jsx-closing-bracket-location": 2,
+    "react/jsx-one-expression-per-line": 2,
+    "react/jsx-sort-props": 2,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-curly-brace-presence": [
+      2,
+      {
+        "props": "never",
+        "children": "ignore"
+      }
+    ],
+    "react/jsx-equals-spacing": [
+      2,
+      "never"
+    ]
+  },
+  "globals": {
+    "__ENVIRONMENT__": true
+  },
+  "plugins": [
+    "promise"
+  ]
+}

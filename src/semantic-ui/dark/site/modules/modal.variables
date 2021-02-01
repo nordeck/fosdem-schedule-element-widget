@@ -1,0 +1,8 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+@background: #20252b;
+@headerBackground: #20252b;
+@contentBackground: #20252b;
+@actionBackground: #20252b;

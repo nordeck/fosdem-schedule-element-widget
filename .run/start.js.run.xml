@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="start.js" type="NodeJSConfigurationType" singleton="false" nameIsGenerated="true" path-to-js-file="scripts/start.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="HTTPS" value="true" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser name="b01074a3-9522-4ad8-869f-a66ade4a19a3" start="true" with-js-debugger="true" url="https://develop.element.io/#/room/!FesjniDeGeLeLVXpZP:matrix.org" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>

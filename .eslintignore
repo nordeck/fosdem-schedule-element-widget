@@ -1,0 +1,10 @@
+*.config
+*.variables
+*.less
+*.d.ts
+*.overrides
+*.test.tsx
+*.log
+config/
+build/
+scripts/

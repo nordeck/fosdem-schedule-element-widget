@@ -1,0 +1,7 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@teal: @primary_color;
+@primaryColor: @primary_color;
+@defaultBorderRadius: 8px;

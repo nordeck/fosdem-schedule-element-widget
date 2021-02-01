@@ -1,0 +1,8 @@
+/.idea
+/.vscode
+/.git
+/.yarn
+/build
+/node_modules
+task-definition.json
+.env*

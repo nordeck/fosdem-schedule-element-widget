@@ -1,0 +1,14 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+
+@backgroundColor: @pageBackground;
+@textColor: rgb(255, 255, 255, 0.6);
+@activeBackgroundColor: lighten(@pageBackground, 20);
+@focusBackgroundColor: lighten(@pageBackground, 20);
+@basicFocusBackground: lighten(@pageBackground, 20);
+@hoverBackgroundColor: lighten(@pageBackground, 20);
+@basicHoverBackground: lighten(@pageBackground, 20);
+@activeBackgroundColor: lighten(@pageBackground, 10);
+@basicActiveBackground: lighten(@pageBackground, 10);

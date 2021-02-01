@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "msjsdiag.debugger-for-chrome",
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "herrmannplatz.npm-dependency-links",
+    "howardzuo.vscode-npm-dependency",
+    "jpoissonnier.vscode-styled-components",
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-german",
+    "dsznajder.es7-react-js-snippets",
+    "editorconfig.editorconfig",
+    "ms-vsliveshare.vsliveshare",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "oouo-diogo-perdigao.docthis",
+    "ms-azuretools.vscode-docker",
+    "aaron-bond.better-comments"
+  ]
+}

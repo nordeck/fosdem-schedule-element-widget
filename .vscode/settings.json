@@ -1,0 +1,35 @@
+{
+  "files.exclude": {
+    ".vscode/chrome/**": true,
+    ".yarn": true
+  },
+  "files.watcherExclude": {
+    ".vscode/chrome/**": true,
+    ".yarn": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "search.exclude": {
+    "build/**": true,
+    "yarn.lock": true
+  },
+  "cSpell.enabledLanguageIds": [
+    "typescript",
+    "typescriptreact",
+    "javascript",
+    "javascriptreact"
+  ],
+  "cSpell.language": "en,de",
+  "cSpell.ignoreRegExpList": [
+    "/import.*?from\\s+(['\"]).*\\1/"
+  ],
+  "debug.javascript.usePreview": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file"
+}

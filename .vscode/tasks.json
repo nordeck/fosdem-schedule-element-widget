@@ -1,0 +1,42 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "label": "npm: start",
+      "detail": "node scripts/start.js",
+      "promptOnClose": true,
+      "isBackground": true,
+      "problemMatcher": [
+        {
+          "owner": "custom",
+          "pattern": {
+            "regexp": "____________"
+          },
+          "background": {
+            "activeOnStart": true,
+            "beginsPattern": "^Starting the development server\\.\\.\\.$",
+            "endsPattern": "^(Compiled successfully!|Failed to compile\\.|Compiled with warnings\\.)$"
+          }
+        }
+      ]
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "npm: build",
+      "detail": "node scripts/build.js"
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "group": "test",
+      "problemMatcher": [],
+      "label": "npm: test",
+      "detail": "node scripts/test.js"
+    }
+  ]
+}

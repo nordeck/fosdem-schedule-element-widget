@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="app" type="NodeJSConfigurationType" path-to-js-file="scripts/start.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="HTTPS" value="true" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser name="1112321e-85f4-40f8-a1ff-78d4b93da6e1" start="true" with-js-debugger="true" url="https://app.element.io/#/room/#fosdem-matrix-schedule-widget-dev:matrix.org" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
