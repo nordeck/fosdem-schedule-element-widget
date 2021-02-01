@@ -4,7 +4,7 @@
       <env name="HTTPS" value="true" />
     </envs>
     <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-      <browser name="b01074a3-9522-4ad8-869f-a66ade4a19a3" start="true" with-js-debugger="true" url="https://develop.element.io/#/room/!FesjniDeGeLeLVXpZP:matrix.org" />
+      <browser name="b01074a3-9522-4ad8-869f-a66ade4a19a3" start="true" with-js-debugger="true" url="https://app.element.io/#/room/#fosdem-matrix-schedule-widget-dev:matrix.org" />
     </EXTENSION>
     <method v="2" />
   </configuration>
