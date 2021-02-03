@@ -1,11 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Moment from 'react-moment';
 import { Button, Card } from 'semantic-ui-react';
-import { ElementWidgetCapabilities } from '../../common/constants';
 import { IScheduleEvent } from '../../reducer/schedulesSlice';
 import ShareUrlModal from '../common/ShareUrlModal';
 import TimeDistance from '../common/TimeDistance';
-import { useWidget } from '../common/WidgetProvider';
 
 interface IEventViewProps {
   event: IScheduleEvent,
@@ -20,21 +18,16 @@ enum Actions {
 const EventView = ({ event }: IEventViewProps) => {
   const [action, setAction] = useState(Actions.None);
   const [url, setUrl] = useState<string | undefined>();
-  const widget = useWidget();
 
   useEffect(() => {
     setUrl(`https://fosdem.org/2021/schedule/event/${event.slug}`);
-  }, [widget, event]);
+  }, [event]);
 
   const openEvent = useCallback(() => {
     if (url) {
-      if (widget.isReady) {
-        widget.widgetApi.transport.send(ElementWidgetCapabilities.CanChangeViewedRoom, { room_id: `#${event.slug}` });
-      } else {
-        window.open(url);
-      }
+      window.open(url);
     }
-  }, [url, widget, event]);
+  }, [url]);
 
   const openShareModal = useCallback(async (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     ev.stopPropagation();
