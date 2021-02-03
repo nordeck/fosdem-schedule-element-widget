@@ -1,7 +1,6 @@
 import { IOpenIDCredentials, WidgetApi } from 'matrix-widget-api';
 import * as qs from 'querystring';
 import React, { useEffect, useState } from 'react';
-import { ElementWidgetCapabilities } from '../../common/constants';
 
 /**
  * An extended version of the Matrix Widget API.
@@ -151,7 +150,6 @@ function WidgetProvider({ children }: React.PropsWithChildren<{}>) {
         isInitializing: true
       }));
       try {
-        widgetApi.requestCapability(ElementWidgetCapabilities.CanChangeViewedRoom);
         widgetApi.start();
       } catch (err) {
         console.error('Unable to initialize Matrix Widget API', err);
