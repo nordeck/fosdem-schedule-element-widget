@@ -33,6 +33,8 @@ jobs:
 
     - name: Update package verions
       run: |
+        git config --local user.email "github-ci@nordeck.net"
+        git config --local user.name "Nordeck CI"
         npm version ${{ github.event.inputs.version }} --force -m "Version %s"
         git push --follow-tags
 
