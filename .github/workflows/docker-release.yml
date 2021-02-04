@@ -20,8 +20,8 @@ jobs:
     - name: Checkout branch
       uses: actions/checkout@v2
       with:
-        ref: main
-        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: ${{ github.head_ref }}
+        token: ${{ secrets.PACKAGE_TOKEN }}
 
     - name: Setup Node.js
       uses: actions/setup-node@v1
