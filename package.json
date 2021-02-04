@@ -1,7 +1,7 @@
 {
   "name": "@nordeck/fosdem-schedule-element-widget",
   "description": "A FOSDEM schedule widget for the Element messenger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "dependencies": {
     "chalk": "^4.1.0",
