@@ -118,7 +118,7 @@ export const getScheduleAsync = debounceAction((roomName: string): AppThunk => {
   return async (dispatch: any) => {
     dispatch(scheduleSlice.actions.setIsLoading(true));
     try {
-      const response = await fetch('https://fosdem.org/2021/schedule/xml', { mode: 'no-cors' });
+      const response = await fetch('/schedule');
       if (response.ok) {
         const xmlStr = await response.text();
         const parser = new DOMParser();
@@ -133,6 +133,8 @@ export const getScheduleAsync = debounceAction((roomName: string): AppThunk => {
           events: mapEvents(events, currentDate),
           start: start.toISOString()
         }));
+      } else {
+        console.warn('failed to fetch events from fosdem.org', response);
       }
     } catch (err) {
       dispatch(scheduleSlice.actions.setError(err.toString()));
