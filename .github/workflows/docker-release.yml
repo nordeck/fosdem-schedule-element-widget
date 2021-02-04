@@ -46,6 +46,6 @@ jobs:
         password: ${{ secrets.PACKAGE_TOKEN }}
 
     - name: Build Docker Image
-      run: yarn run docker:build -- --push ghcr.io
+      run: yarn run docker:build -- --push ghcr.io/nordeck
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
