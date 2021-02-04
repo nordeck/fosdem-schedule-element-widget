@@ -3,6 +3,7 @@ const compression = require('compression');
 const helmet = require('helmet');
 const engine = require('consolidate');
 const chalk = require('chalk');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const PORT = parseInt(process.env.PORT, 10) || 80;
 const HOST = process.env.HOST || '0.0.0.0';
@@ -22,6 +23,16 @@ const renderOptions = {
 };
 
 const app = express();
+
+// proxy requests to fosdem endpoint
+const apiProxy = createProxyMiddleware('/schedule', {
+  changeOrigin: true,
+  pathRewrite: {
+    '^/schedule': ''
+  },
+  target: 'https://fosdem.org/2021/schedule/xml'
+});
+app.use('/schedule', apiProxy);
 
 app.use(helmet({
   frameguard: false // disable frame guard because the widget has to be displayed in an iframe
