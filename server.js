@@ -7,6 +7,16 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 const PORT = parseInt(process.env.PORT, 10) || 80;
 const HOST = process.env.HOST || '0.0.0.0';
+const HOME_SERVER_URL = process.env.REACT_APP_HOME_SERVER_URL || 'https://matrix.org';
+const connectSecurityPolicy = ['\'self\''];
+
+try {
+  const url = new URL(HOME_SERVER_URL);
+  connectSecurityPolicy.push(`${url.hostname}:*`);
+} catch (err) {
+  console.error(chalk.redBright(`The value of REACT_APP_HOME_SERVER_URL environment variable '${err.input}' is not valid: ${err.code}`));
+  process.exit(1);
+}
 
 const config = {};
 // extract environment variables that start with REACT_APP_ to be injected to index.html at runtime
@@ -40,7 +50,7 @@ app.use(helmet({
 
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    connectSrc: ['\'self\'', 'fosdem.org'],
+    connectSrc: connectSecurityPolicy,
     defaultSrc: ['\'self\''],
     fontSrc: ['\'self\'', 'data:', 'fonts.gstatic.com'],
     imgSrc: ['\'self\'', 'https:', 'data:'],
